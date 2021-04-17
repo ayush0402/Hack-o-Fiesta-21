@@ -40,6 +40,8 @@
                         android:layout_marginBottom="20dp"
                         android:hint="Name"
                         android:inputType="textEmailAddress" />
+                </com.google.android.material.textfield.TextInputLayout>
+
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/tlEmail"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -55,7 +57,6 @@
                             android:inputType="textEmailAddress" />
 
                     </com.google.android.material.textfield.TextInputLayout>
-                </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tlPassword"
