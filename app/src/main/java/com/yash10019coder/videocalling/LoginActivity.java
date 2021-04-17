@@ -34,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = auth.getCurrentUser();
         if (currentUser != null) {
-
+            startActivity(new Intent(LoginActivity.this, MainActivity.class));
         }
     }
 
@@ -66,12 +66,15 @@ public class LoginActivity extends AppCompatActivity {
                                         // Sign in success, update UI with the signed-in user's information
                                         Log.d("TAG", "signInWithEmail:success");
                                         FirebaseUser user = auth.getCurrentUser();
+                                        startActivity(new Intent(LoginActivity.this, MainActivity.class));
 //                    updateUI(user);
                                     } else {
                                         // If sign in fails, display a message to the user.
                                         Log.w("TAG", "signInWithEmail:failure", task.getException());
                                         Toast.makeText(LoginActivity.this, "Authentication failed.",
                                                 Toast.LENGTH_SHORT).show();
+                                        activityLoginBinding.tlEmail.setError(task.getException().toString());
+                                        activityLoginBinding.tlPassword.setError(task.getException().toString());
 //                    updateUI(null);
                                     }
                                 }
@@ -82,10 +85,11 @@ public class LoginActivity extends AppCompatActivity {
         activityLoginBinding.btSignupscreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LoginActivity.this,SignUpActivity.class));
+                Log.i("TAG", "onClick: presses pushed button");
+                Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
+                startActivity(intent);
             }
         });
-
 
 
     }
