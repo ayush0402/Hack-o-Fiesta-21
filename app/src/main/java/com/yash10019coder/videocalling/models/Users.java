@@ -1,4 +1,4 @@
-package com.yash10019coder.videocalling.Models;
+package com.yash10019coder.videocalling.models;
 public class Users {
     String profile_pic, username, mail, id, user_password;
 
