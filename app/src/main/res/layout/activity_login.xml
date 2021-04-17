@@ -149,17 +149,11 @@
                         android:id="@+id/ivGoogle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginRight="0dp"
                         android:layout_weight="1"
                         android:src="@drawable/ic_google_symbol" />
 
-                    <ImageView
-                        android:id="@+id/ivFacebook"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_weight="1"
-                        android:src="@drawable/ic_facebook" />
+
                 </LinearLayout>
 
             </LinearLayout>
