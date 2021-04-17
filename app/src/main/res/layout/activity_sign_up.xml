@@ -39,6 +39,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="20dp"
                         android:hint="Name"
+                        android:background="@drawable/roundedittext"
                         android:inputType="textEmailAddress" />
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/tlEmail"
@@ -51,6 +52,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="20dp"
+                            android:background="@drawable/roundedittext"
                             android:hint="Email"
                             android:inputType="textEmailAddress" />
 
@@ -72,6 +74,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="20dp"
                         android:hint="Password"
+                        android:background="@drawable/roundedittext"
                         android:inputType="textPassword" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -82,12 +85,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
+                    android:background="@drawable/roundedittext"
                     android:text="Create an account" />
 
                 <Button
                     android:id="@+id/btbackToLogin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/roundedittext"
+                    android:layout_marginTop="5dp"
                     android:text="Alredy  have an account" />
 
             </LinearLayout>
