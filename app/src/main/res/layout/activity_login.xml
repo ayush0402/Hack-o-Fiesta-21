@@ -41,6 +41,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="20dp"
                         android:hint="Email"
+                        android:background="@drawable/roundedittext"
                         android:inputType="textEmailAddress" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -59,6 +60,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="20dp"
+                        android:background="@drawable/roundedittext"
                         android:hint="Password"
                         android:inputType="textPassword" />
 
@@ -70,12 +72,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
+                    android:background="@drawable/roundedittext"
                     android:text="Login" />
 
                 <Button
                     android:id="@+id/btSignupscreen"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/roundedittext"
                     android:text="create a new account" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -89,7 +94,7 @@
                         android:id="@+id/view2"
                         android:layout_width="0dp"
                         android:layout_height="2dp"
-                        android:background="@color/black"
+                        android:background="#ccc"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/textView"
                         app:layout_constraintHorizontal_bias="0.5"
@@ -102,10 +107,14 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="serif"
+                        android:shadowColor="@color/teal_700"
+                        android:shadowDx="4"
+                        android:shadowDy="4"
+                        android:shadowRadius="5"
                         android:text="OR"
                         android:textAllCaps="true"
                         android:textColor="@color/black"
-                        android:textSize="36sp"
+                        android:textSize="30sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/view"
@@ -118,7 +127,7 @@
                         android:id="@+id/view"
                         android:layout_width="0dp"
                         android:layout_height="2dp"
-                        android:background="@color/black"
+                        android:background="#ccc"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.5"
@@ -134,6 +143,11 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="20dp"
                     android:fontFamily="serif"
+                    android:shadowColor="@color/teal_700"
+                    android:shadowDx="5"
+                    android:shadowDy="5"
+                    android:shadowRadius="10"
+                    android:textStyle="normal"
                     android:gravity="center"
                     android:text="Sign in with"
                     android:textColor="@color/black"
