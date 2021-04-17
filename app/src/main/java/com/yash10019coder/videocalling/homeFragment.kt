@@ -17,7 +17,12 @@ class homeFragment : Fragment() {
     val binding: FragmentHomeBinding= DataBindingUtil.inflate(
             inflater, R.layout.fragment_home, container,false
     )
+    //type your code here
+
+
         return binding.root
+
+
     }
 
 
