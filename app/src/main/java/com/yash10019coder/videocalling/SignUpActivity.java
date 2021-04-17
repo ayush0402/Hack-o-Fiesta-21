@@ -44,30 +44,32 @@ public class SignUpActivity extends AppCompatActivity {
         binding.btSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = binding.tlEmail.toString().trim();
-                String password = binding.tlPassword.toString().trim();
-                if (!email.equals("") || !password.equals("")) {
-                    auth.createUserWithEmailAndPassword(email, password)
-                            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                                @Override
-                                public void onComplete(@NonNull Task<AuthResult> task) {
-                                    if (task.isSuccessful()) {
-                                        // Sign in success, update UI with the signed-in user's information
-                                        Log.d("TAG", "createUserWithEmail:success");
-                                        FirebaseUser user = auth.getCurrentUser();
-                                        startActivity(new Intent(SignUpActivity.this, MainActivity.class));
-                                    } else {
-                                        // If sign in fails, display a message to the user.
-                                        Log.w("TAG", "createUserWithEmail:failure", task.getException());
-                                        Toast.makeText(SignUpActivity.this, "Authentication failed.",
-                                                Toast.LENGTH_SHORT).show();
-                                        binding.tlName.setError(task.getException().toString());
-                                        binding.tlEmail.setError(task.getException().toString());
-                                        binding.tlPassword.setError(task.getException().toString());
-                                    }
+                String email = binding.tlEmail.getEditText().getText().toString().trim();
+                String password = binding.tlPassword.getEditText().getText().toString().trim();
+                Log.i("TAG", "onResume: " + email);
+                Log.i("TAG", "onResume: " + password);
+//                if (!email.equals("") || !password.equals("")) {
+                auth.createUserWithEmailAndPassword(email, password)
+                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()) {
+                                    // Sign in success, update UI with the signed-in user's information
+                                    Log.d("TAG", "createUserWithEmail:success" + email + " " + password);
+                                    FirebaseUser user = auth.getCurrentUser();
+                                    startActivity(new Intent(SignUpActivity.this, MainActivity.class));
+                                } else {
+                                    // If sign in fails, display a message to the user.
+                                    Log.w("TAG", "createUserWithEmail:failure" + email + " " + password, task.getException());
+                                    Toast.makeText(SignUpActivity.this, "Authentication failed.",
+                                            Toast.LENGTH_SHORT).show();
+                                    binding.tlName.setError(task.getException().toString());
+                                    binding.tlEmail.setError(task.getException().toString());
+                                    binding.tlPassword.setError(task.getException().toString());
                                 }
-                            });
-                }
+                            }
+                        });
+//                }
             }
         });
         binding.btbackToLogin.setOnClickListener(new View.OnClickListener() {
