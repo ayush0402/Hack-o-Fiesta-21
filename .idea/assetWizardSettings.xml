@@ -18,7 +18,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/videocam/baseline_videocam_24.xml" />
+                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/wine_bar/baseline_wine_bar_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -28,7 +28,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_baseline_videocam_24" />
+                            <entry key="color" value="0099ff" />
+                            <entry key="outputName" value="vi_contest" />
                             <entry key="sourceFile" value="C:\Users\LENOVO\Downloads\vector assets\facebook.svg" />
                           </map>
                         </option>
